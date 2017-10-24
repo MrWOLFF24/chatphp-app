@@ -4,7 +4,7 @@ Here's my first (mini)Chat app,
 
 it's work with very basic command.
 
-you should creat a data base caled chat with a messages table,
+you should creat a data base named chat with a messages table,
 
 the table should have 4 col
 - id primery auto_increment
