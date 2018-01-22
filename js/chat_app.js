@@ -1,19 +1,11 @@
-$(document).ready(function () {
-    $('#envoi').click(function (e) {
-        e.preventDefault();
+const app = (function () {
+    "use strict";
 
-        var pseudo = encodeURIComponent($('#pseudo').val());
-        var message;
-        message = encodeURIComponent($('#message').val());
 
-        if (pseudo !== "" && message !== "") {
-            $.ajax({
-                url : "envoibdd.php",
-                type : "POST",
-                data : "pseudo=" + pseudo + "&message=" + message
-            });
+    const init = function () {
 
-            $('#message').append("<p>" + pseudo + "dit :" + message + "</p>");
-        }
-    });
-});
+    };
+
+    window.addEventListener("DOMContentLoaded", init);
+
+}());

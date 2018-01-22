@@ -12,7 +12,7 @@ include 'connectTobdd.php';
     $message = htmlspecialchars($_POST['message']);
 
             $date_message = new DateTime("NOW"); //new DateTime
-            $date_message = $date_message->format('Y-m-d H:i:s'); //convert to frech format
+            $date_message = $date_message->format('Y-m-d H:i:s'); //convert to french format
 
         //send data with request sql
         $req = $bdd->prepare("INSERT INTO messages 
