@@ -3,9 +3,9 @@ session_start();
 include 'connectTobdd.php';
 /**********
  *
- *  send all data recive from form to data base
+ *  send all data to data base
  */
-            //set paris timezone
+            //set timezone at Paris
             date_default_timezone_set('Europe/Paris');
 
     $pseudo = htmlspecialchars($_SESSION['pseudo']);
@@ -14,12 +14,12 @@ include 'connectTobdd.php';
             $date_message = new DateTime("NOW"); //new DateTime
             $date_message = $date_message->format('Y-m-d H:i:s'); //convert to french format
 
-        //send data with request sql
+        //send data with sql request
         $req = $bdd->prepare("INSERT INTO messages 
                             (pseudo, message, date_message) 
                             VALUES('$pseudo', '$message', '$date_message')");
 
-        //execute the request and send data to data base
+        //execute the request and send data
         $req->execute(array(
             'pseudo' => $pseudo,
             'message' => $message,
